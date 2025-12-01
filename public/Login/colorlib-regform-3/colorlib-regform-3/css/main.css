@@ -254,11 +254,11 @@ h6 {
 }
 
 .btn--green {
-  background: #435663;
+  background: #4A70A9;
 }
 
 .btn--green:hover {
-  background: #4dae3c;
+  background: #8FABD4;
 }
 
 /* ==========================================================================
@@ -367,7 +367,7 @@ input {
 .input--style-3::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   color: #ccc;
-  opacity: 1;
+  opacity: 0.8%;
 }
 
 .input--style-3:-ms-input-placeholder {
@@ -391,7 +391,24 @@ input {
   width: 100% !important;
   outline: none;
 }
+/* Pour appliquer le même style au select qu'aux inputs */
+.input--style-3,
+.rs-select2.js-select-simple select {
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    transition: all 0.3s;
+}
 
+.input--style-3:focus,
+.rs-select2.js-select-simple select:focus {
+    border-bottom-color: #EEEEEE;
+    padding: 10px 0 8px; /* Léger ajustement au focus */
+}
 .rs-select2 .select2-container .select2-selection--single {
   outline: none;
   border: none;
@@ -470,8 +487,17 @@ input {
   font-size: 24px;
   color: #fff;
   font-weight: 400;
-  margin-bottom: 56px;
+  margin-bottom: 10px;
     margin-left: 50px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8)
+}
+.stitle{
+    margin-left: 14px;
+    margin-top: 10px;
+    color: #777C6D;
+    font-size: 10px;
+    margin-bottom: 30px;
+
 }
 
 /* ==========================================================================

@@ -22,7 +22,7 @@
     <link href="{{ asset('vendor/datepicker/daterangepicker.css') }}" rel="stylesheet">
 
     <!-- Main CSS-->
-    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('login/colorlib-regform-3/colorlib-regform-3/css/main.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
             <div class="card-heading"></div>
             <div class="card-body">
                 <h2 class="title">Registration</h2>
-
+                <h6 class="stitle">Commencez votre aventure événementielle &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;en  quelques clics !</h6>
                 <form method="POST" action="{{ path('app_register') }}">
                     <div class="input-group">
                         <input class="input--style-3" type="text" placeholder="Name" name="name">
@@ -48,7 +48,7 @@
 
                     <div class="input-group">
                         <div class="rs-select2 js-select-simple select--no-search">
-                            <select name="role">
+                            <select class="input--style-3" name="role">
                                 <option disabled selected>Role</option>
                                 <option>Client</option>
                                 <option>Organisateur</option>
