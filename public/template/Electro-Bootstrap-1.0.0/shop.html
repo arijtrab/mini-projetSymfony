@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Electro - Electronics Website Template</title>
+        <title>Eventora -Shop Website</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -55,17 +55,19 @@
             </div>
             <div class="col-lg-4 text-center d-flex align-items-center justify-content-center">
                 <small class="text-dark">Call Us:</small>
-                <a href="#" class="text-muted">(+012) 1234 567890</a>
+                <a href="#" class="text-muted">(+216) 1234 567890</a>
             </div>
 
             <div class="col-lg-4 text-center text-lg-end">
                 <div class="d-inline-flex align-items-center" style="height: 45px;">
                     <div class="dropdown">
-                        <a href="#" class="dropdown-toggle text-muted me-2" data-bs-toggle="dropdown"><small>
-                                USD</small></a>
+                        <a href="#" id="currencyDropdown" class="dropdown-toggle text-muted me-2" data-bs-toggle="dropdown">
+                            <small>USD</small>
+                        </a>
                         <div class="dropdown-menu rounded">
-                            <a href="#" class="dropdown-item"> Euro</a>
-                            <a href="#" class="dropdown-item"> Dolar</a>
+                            <a href="#" class="dropdown-item" data-currency="EUR">Euro</a>
+                            <a href="#" class="dropdown-item" data-currency="USD">Dollar</a>
+                            <a href="#" class="dropdown-item" data-currency="TND">Tunisian Dinar</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -101,7 +103,7 @@
                 <div class="d-inline-flex align-items-center">
                     <a href="" class="navbar-brand p-0">
                         <h1 class="display-5 text-primary m-0"><i
-                                class="fas fa-shopping-bag text-secondary me-2"></i>Electro</h1>
+                                class="fas fa-shopping-bag text-secondary me-2"></i>Eventora</h1>
                         <!-- <img src="img/logo.png" alt="Logo"> -->
                     </a>
                 </div>
@@ -113,10 +115,10 @@
                             data-bs-target="#dropdownToggle123" placeholder="Search Looking For?">
                         <select class="form-select text-dark border-0 border-start rounded-0 p-3" style="width: 200px;">
                             <option value="All Category">All Category</option>
-                            <option value="Pest Control-2">Category 1</option>
-                            <option value="Pest Control-3">Category 2</option>
-                            <option value="Pest Control-4">Category 3</option>
-                            <option value="Pest Control-5">Category 4</option>
+                            <option value="Pest Control-2">Sports</option>
+                            <option value="Pest Control-3">Festivals</option>
+                            <option value="Pest Control-4">Theatre</option>
+
                         </select>
                         <button type="button" class="btn btn-primary rounded-pill py-3 px-5" style="border: 0;"><i
                                 class="fas fa-search"></i></button>
@@ -152,34 +154,24 @@
                             <ul class="list-unstyled categories-bars">
                                 <li>
                                     <div class="categories-bars-item">
-                                        <a href="#">Accessories</a>
+                                        <a href="#">Sport</a>
                                         <span>(3)</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="categories-bars-item">
-                                        <a href="#">Electronics & Computer</a>
+                                        <a href="#">Festivals</a>
                                         <span>(5)</span>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="categories-bars-item">
-                                        <a href="#">Laptops & Desktops</a>
+                                        <a href="#">Theatre</a>
                                         <span>(2)</span>
                                     </div>
                                 </li>
-                                <li>
-                                    <div class="categories-bars-item">
-                                        <a href="#">Mobiles & Tablets</a>
-                                        <span>(8)</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="categories-bars-item">
-                                        <a href="#">SmartPhone & Smart TV</a>
-                                        <span>(5)</span>
-                                    </div>
-                                </li>
+
+
                             </ul>
                         </div>
                     </div>
@@ -189,7 +181,7 @@
                 <nav class="navbar navbar-expand-lg navbar-light bg-primary ">
                     <a href="" class="navbar-brand d-block d-lg-none">
                         <h1 class="display-5 text-secondary m-0"><i
-                                class="fas fa-shopping-bag text-white me-2"></i>Electro</h1>
+                                class="fas fa-shopping-bag text-white me-2"></i>Eventora</h1>
                         <!-- <img src="img/logo.png" alt="Logo"> -->
                     </a>
                     <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
@@ -219,40 +211,29 @@
                                     <ul class="list-unstyled categories-bars">
                                         <li>
                                             <div class="categories-bars-item">
-                                                <a href="#">Accessories</a>
+                                                <a href="#">Sports</a>
                                                 <span>(3)</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="categories-bars-item">
-                                                <a href="#">Electronics & Computer</a>
+                                                <a href="#">Festivals</a>
                                                 <span>(5)</span>
                                             </div>
                                         </li>
                                         <li>
                                             <div class="categories-bars-item">
-                                                <a href="#">Laptops & Desktops</a>
+                                                <a href="#">Theatre</a>
                                                 <span>(2)</span>
                                             </div>
                                         </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">Mobiles & Tablets</a>
-                                                <span>(8)</span>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="categories-bars-item">
-                                                <a href="#">SmartPhone & Smart TV</a>
-                                                <span>(5)</span>
-                                            </div>
-                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
                         </div>
                         <a href="" class="btn btn-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0"><i
-                                class="fa fa-mobile-alt me-2"></i> +0123 456 7890</a>
+                                class="fa fa-mobile-alt me-2"></i> +216 34 567 890</a>
                     </div>
                 </nav>
             </div>
@@ -271,9 +252,10 @@
     </div>
     <!-- Single Page Header End -->
 
-    <!-- Searvices Start -->
+    <!-- Services Start -->
     <div class="container-fluid px-0">
-        <div class="row g-0">
+        <div class="row g-0 justify-content-center">
+
             <div class="col-6 col-md-4 col-lg-2 border-start border-end wow fadeInUp" data-wow-delay="0.1s">
                 <div class="p-4">
                     <div class="d-inline-flex align-items-center">
@@ -285,17 +267,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.2s">
-                <div class="p-4">
-                    <div class="d-flex align-items-center">
-                        <i class="fab fa-telegram-plane fa-2x text-primary"></i>
-                        <div class="ms-4">
-                            <h6 class="text-uppercase mb-2">Free Shipping</h6>
-                            <p class="mb-0">Free shipping on all order</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.3s">
                 <div class="p-4">
                     <div class="d-flex align-items-center">
@@ -307,17 +279,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.4s">
-                <div class="p-4">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-credit-card fa-2x text-primary"></i>
-                        <div class="ms-4">
-                            <h6 class="text-uppercase mb-2">Receive Gift Card</h6>
-                            <p class="mb-0">Recieve gift all over oder $50</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.5s">
                 <div class="p-4">
                     <div class="d-flex align-items-center">
@@ -329,19 +291,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-2 border-end wow fadeInUp" data-wow-delay="0.6s">
-                <div class="p-4">
-                    <div class="d-flex align-items-center">
-                        <i class="fas fa-blog fa-2x text-primary"></i>
-                        <div class="ms-4">
-                            <h6 class="text-uppercase mb-2">Online Service</h6>
-                            <p class="mb-0">Free return products in 30 days</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
+
     <!-- Searvices End -->
 
 
@@ -383,43 +336,30 @@
             <div class="row g-4">
                 <div class="col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="product-categories mb-4">
-                        <h4>Products Categories</h4>
+                        <h4>Event Categories</h4>
                         <ul class="list-unstyled">
                             <li>
                                 <div class="categories-item">
                                     <a href="#" class="text-dark"><i class="fas fa-apple-alt text-secondary me-2"></i>
-                                        Accessories</a>
+                                        Sport</a>
                                     <span>(3)</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="categories-item">
                                     <a href="#" class="text-dark"><i class="fas fa-apple-alt text-secondary me-2"></i>
-                                        Electronics & Computer</a>
+                                        Festivals</a>
                                     <span>(5)</span>
                                 </div>
                             </li>
                             <li>
                                 <div class="categories-item">
                                     <a href="#" class="text-dark"><i
-                                            class="fas fa-apple-alt text-secondary me-2"></i>Laptops & Desktops</a>
+                                            class="fas fa-apple-alt text-secondary me-2"></i>Theatre</a>
                                     <span>(2)</span>
                                 </div>
                             </li>
-                            <li>
-                                <div class="categories-item">
-                                    <a href="#" class="text-dark"><i
-                                            class="fas fa-apple-alt text-secondary me-2"></i>Mobiles & Tablets</a>
-                                    <span>(8)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="categories-item">
-                                    <a href="#" class="text-dark"><i
-                                            class="fas fa-apple-alt text-secondary me-2"></i>SmartPhone & Smart TV</a>
-                                    <span>(5)</span>
-                                </div>
-                            </li>
+
                         </ul>
                     </div>
                     <div class="price mb-4">
@@ -429,55 +369,8 @@
                         <output id="amount" name="amount" min-velue="0" max-value="500" for="rangeInput">0</output>
                         <div class=""></div>
                     </div>
-                    <div class="product-color mb-3">
-                        <h4>Select By Color</h4>
-                        <ul class="list-unstyled">
-                            <li>
-                                <div class="product-color-item">
-                                    <a href="#" class="text-dark"><i class="fas fa-apple-alt text-secondary me-2"></i>
-                                        Gold</a>
-                                    <span>(1)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product-color-item">
-                                    <a href="#" class="text-dark"><i class="fas fa-apple-alt text-secondary me-2"></i>
-                                        Green</a>
-                                    <span>(1)</span>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="product-color-item">
-                                    <a href="#" class="text-dark"><i class="fas fa-apple-alt text-secondary me-2"></i>
-                                        White</a>
-                                    <span>(1)</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="additional-product mb-4">
-                        <h4>Additional Products</h4>
-                        <div class="additional-product-item">
-                            <input type="radio" class="me-2" id="Categories-1" name="Categories-1" value="Beverages">
-                            <label for="Categories-1" class="text-dark"> Accessories</label>
-                        </div>
-                        <div class="additional-product-item">
-                            <input type="radio" class="me-2" id="Categories-2" name="Categories-1" value="Beverages">
-                            <label for="Categories-2" class="text-dark"> Electronics & Computer</label>
-                        </div>
-                        <div class="additional-product-item">
-                            <input type="radio" class="me-2" id="Categories-3" name="Categories-1" value="Beverages">
-                            <label for="Categories-3" class="text-dark"> Laptops & Desktops</label>
-                        </div>
-                        <div class="additional-product-item">
-                            <input type="radio" class="me-2" id="Categories-4" name="Categories-1" value="Beverages">
-                            <label for="Categories-4" class="text-dark"> Mobiles & Tablets</label>
-                        </div>
-                        <div class="additional-product-item">
-                            <input type="radio" class="me-2" id="Categories-5" name="Categories-1" value="Beverages">
-                            <label for="Categories-5" class="text-dark"> SmartPhone & Smart TV</label>
-                        </div>
-                    </div>
+
+
                     <div class="featured-product mb-4">
                         <h4 class="mb-3">Featured products</h4>
                         <div class="featured-product-item">
@@ -538,7 +431,7 @@
                             </div>
                         </div>
                         <div class="d-flex justify-content-center my-4">
-                            <a href="#" class="btn btn-primary px-4 py-3 rounded-pill w-100">Vew More</a>
+                            <a href="#" class="btn btn-primary px-4 py-3 rounded-pill w-100">Veiw More</a>
                         </div>
                     </div>
                     <a href="#">
@@ -552,21 +445,7 @@
                             </div>
                         </div>
                     </a>
-                    <div class="product-tags py-4">
-                        <h4 class="mb-3">PRODUCT TAGS</h4>
-                        <div class="product-tags-items bg-light rounded p-3">
-                            <a href="#" class="border rounded py-1 px-2 mb-2">New</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">brand</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">black</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">white</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">tablats</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">phone</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">camera</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">drone</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">talevision</a>
-                            <a href="#" class="border rounded py-1 px-2 mb-2">slaes</a>
-                        </div>
-                    </div>
+
                 </div>
                 <div class="col-lg-9 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="rounded mb-4 position-relative">
@@ -588,21 +467,7 @@
                                         class="fa fa-search"></i></span>
                             </div>
                         </div>
-                        <div class="col-xl-3 text-end">
-                            <div class="bg-light ps-3 py-3 rounded d-flex justify-content-between">
-                                <label for="electronics">Sort By:</label>
-                                <select id="electronics" name="electronicslist"
-                                    class="border-0 form-select-sm bg-light me-3" form="electronicsform">
-                                    <option value="volvo">Default Sorting</option>
-                                    <option value="volv">Nothing</option>
-                                    <option value="sab">Popularity</option>
-                                    <option value="saab">Newness</option>
-                                    <option value="opel">Average Rating</option>
-                                    <option value="audio">Low to high</option>
-                                    <option value="audi">High to low</option>
-                                </select>
-                            </div>
-                        </div>
+
                         <div class="col-lg-4 col-xl-2">
                             <ul class="nav nav-pills d-inline-flex text-center py-2 px-2 rounded bg-light mb-4">
                                 <li class="nav-item me-4">
@@ -632,10 +497,10 @@
                                                 </div>
                                             </div>
                                             <div class="text-center rounded-bottom p-4">
-                                                <a href="#" class="d-block mb-2">SmartPhone</a>
-                                                <a href="#" class="d-block h4">Apple iPad Mini <br> G2356</a>
-                                                <del class="me-2 fs-5">$1,250.00</del>
-                                                <span class="text-primary fs-5">$1,050.00</span>
+                                                <a href="#" class="d-block mb-2">-----</a>
+                                                <a href="#" class="d-block h4">------ <br> G2356</a>
+                                                <del class="me-2 fs-5">----</del>
+                                                <span class="text-primary fs-5">----</span>
                                             </div>
                                         </div>
                                         <div
@@ -665,7 +530,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-4">
+                                <!--<div class="col-lg-4">
                                     <div class="product-item rounded wow fadeInUp" data-wow-delay="0.3s">
                                         <div class="product-item-inner border rounded">
                                             <div class="product-item-inner-item">
@@ -1018,7 +883,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                                 <div class="col-12 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="pagination d-flex justify-content-center mt-5">
                                         <a href="#" class="rounded">&laquo;</a>
@@ -1033,7 +898,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="tab-6" class="products tab-pane fade show p-0">
+                        <!--<div id="tab-6" class="products tab-pane fade show p-0">
                             <div class="row g-4 products-mini">
                                 <div class="col-lg-6">
                                     <div class="products-mini-item border">
@@ -1503,7 +1368,7 @@
                                         <a href="#" class="rounded">&raquo;</a>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
@@ -1550,9 +1415,10 @@
 
     <!-- Footer Start -->
     <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
-        <div class="container py-5">
-            <div class="row g-4 rounded mb-5" style="background: rgba(255, 255, 255, .03);">
-                <div class="col-md-6 col-lg-6 col-xl-3">
+        <div class="row g-0 justify-content-center">
+            <div class="row g-4 justify-content-center rounded mb-5" style="background: rgba(255, 255, 255, .03);">
+
+            <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="rounded p-4">
                         <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4"
                             style="width: 70px; height: 70px;">
@@ -1560,7 +1426,7 @@
                         </div>
                         <div>
                             <h4 class="text-white">Address</h4>
-                            <p class="mb-2">123 Street New York.USA</p>
+                            <p class="mb-2">123 Street ARIANA</p>
                         </div>
                     </div>
                 </div>
@@ -1572,7 +1438,7 @@
                         </div>
                         <div>
                             <h4 class="text-white">Mail Us</h4>
-                            <p class="mb-2">info@example.com</p>
+                            <p class="mb-2">Eventora@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -1584,30 +1450,19 @@
                         </div>
                         <div>
                             <h4 class="text-white">Telephone</h4>
-                            <p class="mb-2">(+012) 3456 7890</p>
+                            <p class="mb-2">(+216) 3456 7890</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="rounded p-4">
-                        <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center mb-4"
-                            style="width: 70px; height: 70px;">
-                            <i class="fab fa-firefox-browser fa-2x text-primary"></i>
-                        </div>
-                        <div>
-                            <h4 class="text-white">Yoursite@ex.com</h4>
-                            <p class="mb-2">(+012) 3456 7890</p>
-                        </div>
-                    </div>
-                </div>
+
             </div>
             <div class="row g-5">
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <div class="footer-item">
                             <h4 class="text-primary mb-4">Newsletter</h4>
-                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
+                            <h4 class="text-white mb-3">Subscribe to Our Newsletter</h4>
+                            <p class="text-white mb-3">Get updates, news and offers directly in your inbox.</p>
                             <div class="position-relative mx-auto rounded-pill">
                                 <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
                                     placeholder="Enter your email">
@@ -1624,7 +1479,6 @@
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Returns</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Order History</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Site Map</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Testimonials</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> My Account</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Unsubscribe Notification</a>
                     </div>
@@ -1633,26 +1487,13 @@
                     <div class="footer-item d-flex flex-column">
                         <h4 class="text-primary mb-4">Information</h4>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> About Us</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Delivery infomation</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Warranty</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> FAQ</a>
                         <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Seller Login</a>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="footer-item d-flex flex-column">
-                        <h4 class="text-primary mb-4">Extras</h4>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Brands</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Gift Vouchers</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Affiliates</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Wishlist</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Order History</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
-                        <a href="#" class=""><i class="fas fa-angle-right me-2"></i> Track Your Order</a>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -1665,7 +1506,7 @@
             <div class="row g-4 align-items-center">
                 <div class="col-md-6 text-center text-md-start mb-md-0">
                     <span class="text-white"><a href="#" class="border-bottom text-white"><i
-                                class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right
+                                class="fas fa-copyright text-light me-2"></i>Eventora</a>, All right
                         reserved.</span>
                 </div>
                 <div class="col-md-6 text-center text-md-end text-white">
