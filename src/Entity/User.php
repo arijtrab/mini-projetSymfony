@@ -4,10 +4,12 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\Table(name: '`user`')]
-class User
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -17,15 +19,16 @@ class User
     #[ORM\Column(length: 255)]
     private ?string $name = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, unique: true)]
     private ?string $email = null;
 
     #[ORM\Column(length: 255)]
     private ?string $password = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $role = null;
+    private ?string $role = null; // type string, valeur : "ROLE_CLIENT" ou "ROLE_ORGANISATEUR"
 
+    // --- Getters / Setters ---
     public function getId(): ?int
     {
         return $this->id;
@@ -39,7 +42,6 @@ class User
     public function setName(string $name): static
     {
         $this->name = $name;
-
         return $this;
     }
 
@@ -51,7 +53,6 @@ class User
     public function setEmail(string $email): static
     {
         $this->email = $email;
-
         return $this;
     }
 
@@ -63,7 +64,6 @@ class User
     public function setPassword(string $password): static
     {
         $this->password = $password;
-
         return $this;
     }
 
@@ -75,7 +75,27 @@ class User
     public function setRole(string $role): static
     {
         $this->role = $role;
-
         return $this;
+    }
+
+    // --- Méthodes pour Symfony ---
+    public function getRoles(): array
+    {
+        $roles = [];
+        if ($this->role) {
+            $roles[] = $this->role; // role stocké en string
+        }
+        $roles[] = 'ROLE_USER'; // toujours ajouter ROLE_USER
+        return array_unique($roles);
+    }
+
+    public function getUserIdentifier(): string
+    {
+        return (string) $this->email;
+    }
+
+    public function eraseCredentials(): void
+    {
+
     }
 }

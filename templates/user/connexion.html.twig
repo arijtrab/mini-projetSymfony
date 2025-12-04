@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colorlib Templates">
+    <meta name="author" content="Colorlib">
+    <meta name="keywords" content="Colorlib Templates">
+
+    <title>Connection</title>
+
+
+
+    <!-- Google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+
+
+    <!-- Main CSS -->
+    <link href="{{ asset('login/colorlib-regform-3/colorlib-regform-3/css/main.css') }}" rel="stylesheet">
+</head>
+
+<body>
+<div class="page-wrapper bg-gra-01 p-t-180 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w780">
+        <div class="card card-3">
+            <div class="card-heading"></div>
+            <div class="card-body">
+                <h2 class="title">Connection</h2>
+                <h6 class="stitle">
+                    Commencez votre aventure événementielle  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;en quelques clics !
+                </h6>
+
+                {# Formulaire Symfony #}
+                {{ form_start(form, {'attr': {'class': 'registration-form'}}) }}
+
+
+                <div class="input-group">
+                    {{ form_row(form.email, {'attr': {'class': 'input--style-3', 'placeholder': 'Email'}}) }}
+                </div>
+
+                <div class="input-group">
+                    {{ form_row(form.password, {'attr': {'class': 'input--style-3', 'placeholder': 'Password'}}) }}
+                </div>
+
+
+
+                <div class="p-t-10">
+                    <button class="btn btn--pill btn--green" type="submit">Submit</button>
+                </div>
+
+                {{ form_end(form) }}
+
+                <p class="account-line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; no account?
+                    <a href="" class="account-link">Register</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

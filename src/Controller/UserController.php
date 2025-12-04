@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Controller;
 
 use App\Entity\User;
@@ -7,35 +8,44 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
+use Symfony\Component\Routing\Annotation\Route;
 
 class UserController extends AbstractController
 {
-#[Route('/register', name: 'user_register')]
-public function register(Request $request, EntityManagerInterface $em, UserPasswordHasherInterface $passwordHasher): Response
-{
-$user = new User();
-$form = $this->createForm(UserType::class, $user);
-$form->handleRequest($request);
+    #[Route('/registre', name: 'user_register')]
+    public function register(
+        Request $request,
+        EntityManagerInterface $em,
+        UserPasswordHasherInterface $passwordHasher
+    ): Response {
+        // Création d'un nouvel utilisateur
+        $user = new User();
 
-if ($form->isSubmitted() && $form->isValid()) {
-// Hasher le mot de passe
-$user->setPassword(
-$passwordHasher->hashPassword(
-$user,
-$form->get('password')->getData()
-)
-);
+        // Création du formulaire lié à l'entité User
+        $form = $this->createForm(UserType::class, $user);
+        $form->handleRequest($request);
 
-$em->persist($user);
-$em->flush();
+        // Vérification si le formulaire est soumis et valide
+        if ($form->isSubmitted() && $form->isValid()) {
+            // Hash du mot de passe avant de sauvegarder l'utilisateur
+            $hashedPassword = $passwordHasher->hashPassword(
+                $user,
+                $form->get('password')->getData() // récupère la valeur du champ password
+            );
+            $user->setPassword($hashedPassword);
 
-return $this->redirectToRoute('home'); // ou une autre route
-}
+            // Sauvegarde de l'utilisateur en base
+            $em->persist($user);
+            $em->flush();
 
-return $this->render('user/register.html.twig', [
-'form' => $form->createView(),
-]);
-}
+            // Redirection après enregistrement
+            return $this->redirectToRoute('app_home');
+        }
+
+        // Affichage du formulaire
+        return $this->render('user/register.html.twig', [
+            'form' => $form->createView(),
+        ]);
+    }
 }
